@@ -34,14 +34,14 @@ try:
     groups = (elves.__len__() / 3)
     groupCount = 0
     groupValue = 0
-    elf = 0
+    elfGroup = 0
     
     while groupCount < groups:
-        elfBag1 = elves[elf]
-        elfBag2 = elves[elf + 1]
-        elfBag3 = elves[elf + 2]
+        elfBag1 = elves[elfGroup]
+        elfBag2 = elves[elfGroup + 1]
+        elfBag3 = elves[elfGroup + 2]
 
-        elf += 3
+        elfGroup += 3
 
         groupItem = elfBag1.intersection(elfBag2, elfBag3)
 
