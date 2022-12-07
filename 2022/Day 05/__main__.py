@@ -40,7 +40,6 @@ try:
         moveCount = 0
 
         while(moveCount < int(instructions[0])):
-            moveCount += 1
 
             match instructions[1]:
                 case "1":
@@ -81,6 +80,8 @@ try:
                     stack8part1.insert(0, movingCrate)
                 case "9":
                     stack9part1.insert(0, movingCrate)
+
+            moveCount += 1  
             
     
     print('Final Stacks Part 1:')
@@ -100,9 +101,9 @@ try:
         line = line.replace('to', '')
 
         instructions = line.split()
-        moveCount = 1
+        moveCount = 0
 
-        while(moveCount <= int(instructions[0])):
+        while(moveCount < int(instructions[0])):
 
             match instructions[1]:
                 case "1":
@@ -126,23 +127,23 @@ try:
 
             match instructions[2]:
                 case "1":
-                    stack1part2.insert(moveCount-1, movingCrate)
+                    stack1part2.insert(moveCount, movingCrate)
                 case "2":
-                    stack2part2.insert(moveCount-1, movingCrate)
+                    stack2part2.insert(moveCount, movingCrate)
                 case "3":
-                    stack3part2.insert(moveCount-1, movingCrate)
+                    stack3part2.insert(moveCount, movingCrate)
                 case "4":
-                    stack4part2.insert(moveCount-1, movingCrate)
+                    stack4part2.insert(moveCount, movingCrate)
                 case "5":
-                    stack5part2.insert(moveCount-1, movingCrate)
+                    stack5part2.insert(moveCount, movingCrate)
                 case "6":
-                    stack6part2.insert(moveCount-1, movingCrate)
+                    stack6part2.insert(moveCount, movingCrate)
                 case "7":
-                    stack7part2.insert(moveCount-1, movingCrate)
+                    stack7part2.insert(moveCount, movingCrate)
                 case "8":
-                    stack8part2.insert(moveCount-1, movingCrate)
+                    stack8part2.insert(moveCount, movingCrate)
                 case "9":
-                    stack9part2.insert(moveCount-1, movingCrate)
+                    stack9part2.insert(moveCount, movingCrate)
             
             moveCount += 1
     
