@@ -10,13 +10,13 @@ class Directory:
         self.name = name
         self.parent = parent
 
-    def create_child(self, name):
+    def createChild(self, name):
         childDirectory = Directory(name, self)
         self.children.append(childDirectory)
 
         return childDirectory
 
-    def create_file(self, details):
+    def createFile(self, details):
         file = File(details)
         self.files.append(file)
 
@@ -51,14 +51,14 @@ try:
                 elif(command[2] == '/'):
                     currentDirectory = root
                 else:
-                    currentDirectory = currentDirectory.create_child(command[2])
+                    currentDirectory = currentDirectory.createChild(command[2])
                     directories.append(currentDirectory)
             elif(command[1] == 'ls'):
                 continue
         elif(command[0] == 'dir'):
-            currentDirectory.create_child(command[1])
+            currentDirectory.createChild(command[1])
         else:
-            currentDirectory.create_file(command)
+            currentDirectory.createFile(command)
 
     for directory in directories:
         size = directory.getSize()
